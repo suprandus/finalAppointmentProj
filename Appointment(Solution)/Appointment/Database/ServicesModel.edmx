@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ServicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="user_account">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_category">
+          <Key>
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="role_id" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="user_information">
+          <Key>
+            <PropertyRef Name="user_info_id" />
+          </Key>
+          <Property Name="user_info_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="full_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email_address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="role_id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__user_info__role___07C12930">
+          <End Role="user_category" Type="Self.user_category" Multiplicity="1" />
+          <End Role="user_information" Type="Self.user_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_category">
+              <PropertyRef Name="role_id" />
+            </Principal>
+            <Dependent Role="user_information">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__user_info__user___06CD04F7">
+          <End Role="user_account" Type="Self.user_account" Multiplicity="1" />
+          <End Role="user_information" Type="Self.user_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_account">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="user_information">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ServicesModelStoreContainer">
+          <EntitySet Name="user_account" EntityType="Self.user_account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_category" EntityType="Self.user_category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_information" EntityType="Self.user_information" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__user_info__role___07C12930" Association="Self.FK__user_info__role___07C12930">
+            <End Role="user_category" EntitySet="user_category" />
+            <End Role="user_information" EntitySet="user_information" />
+          </AssociationSet>
+          <AssociationSet Name="FK__user_info__user___06CD04F7" Association="Self.FK__user_info__user___06CD04F7">
+            <End Role="user_account" EntitySet="user_account" />
+            <End Role="user_information" EntitySet="user_information" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ServicesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="user_account" EntityType="ServicesModel.user_account" />
+          <EntitySet Name="user_category" EntityType="ServicesModel.user_category" />
+          <EntitySet Name="user_information" EntityType="ServicesModel.user_information" />
+          <AssociationSet Name="FK__user_info__user___06CD04F7" Association="ServicesModel.FK__user_info__user___06CD04F7">
+            <End Role="user_account" EntitySet="user_account" />
+            <End Role="user_information" EntitySet="user_information" />
+          </AssociationSet>
+          <AssociationSet Name="FK__user_info__role___07C12930" Association="ServicesModel.FK__user_info__role___07C12930">
+            <End Role="user_category" EntitySet="user_category" />
+            <End Role="user_information" EntitySet="user_information" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="user_account">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_information" Relationship="ServicesModel.FK__user_info__user___06CD04F7" FromRole="user_account" ToRole="user_information" />
+        </EntityType>
+        <EntityType Name="user_category">
+          <Key>
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="role_id" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_information" Relationship="ServicesModel.FK__user_info__role___07C12930" FromRole="user_category" ToRole="user_information" />
+        </EntityType>
+        <EntityType Name="user_information">
+          <Key>
+            <PropertyRef Name="user_info_id" />
+          </Key>
+          <Property Name="user_info_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="full_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="role_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="user_account" Relationship="ServicesModel.FK__user_info__user___06CD04F7" FromRole="user_information" ToRole="user_account" />
+          <NavigationProperty Name="user_category" Relationship="ServicesModel.FK__user_info__role___07C12930" FromRole="user_information" ToRole="user_category" />
+        </EntityType>
+        <Association Name="FK__user_info__user___06CD04F7">
+          <End Type="ServicesModel.user_account" Role="user_account" Multiplicity="1" />
+          <End Type="ServicesModel.user_information" Role="user_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_account">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="user_information">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__user_info__role___07C12930">
+          <End Type="ServicesModel.user_category" Role="user_category" Multiplicity="1" />
+          <End Type="ServicesModel.user_information" Role="user_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_category">
+              <PropertyRef Name="role_id" />
+            </Principal>
+            <Dependent Role="user_information">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ServicesModelStoreContainer" CdmEntityContainer="ServicesEntities">
+          <EntitySetMapping Name="user_account">
+            <EntityTypeMapping TypeName="ServicesModel.user_account">
+              <MappingFragment StoreEntitySet="user_account">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_category">
+            <EntityTypeMapping TypeName="ServicesModel.user_category">
+              <MappingFragment StoreEntitySet="user_category">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_information">
+            <EntityTypeMapping TypeName="ServicesModel.user_information">
+              <MappingFragment StoreEntitySet="user_information">
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="email_address" ColumnName="email_address" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="user_info_id" ColumnName="user_info_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

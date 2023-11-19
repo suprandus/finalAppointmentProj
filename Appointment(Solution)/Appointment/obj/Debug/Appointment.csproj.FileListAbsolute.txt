@@ -1,0 +1,17 @@
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\Appointment.exe.config
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\Appointment.exe
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\Appointment.pdb
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\MetroFramework.Design.dll
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\MetroFramework.dll
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.Properties.Resources.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.csproj.GenerateResource.cache
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.csproj.CoreCompileInputs.cache
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.csproj.CopyComplete
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.exe
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.pdb
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.frm_Login.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.frm_Register.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\EntityFramework.dll
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\EntityFramework.xml
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.csproj.AssemblyReference.cache
