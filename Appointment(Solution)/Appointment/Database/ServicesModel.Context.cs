@@ -12,6 +12,9 @@ namespace Appointment.Database
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class ServicesEntities : DbContext
     {
@@ -28,5 +31,19 @@ namespace Appointment.Database
         public DbSet<user_account> user_account { get; set; }
         public DbSet<user_category> user_category { get; set; }
         public DbSet<user_information> user_information { get; set; }
+        public DbSet<UserView> UserView { get; set; }
+    
+        public virtual ObjectResult<GetUserLoginInfo_Result> GetUserLoginInfo(string username, string password)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("Username", username) :
+                new ObjectParameter("Username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetUserLoginInfo_Result>("GetUserLoginInfo", usernameParameter, passwordParameter);
+        }
     }
 }

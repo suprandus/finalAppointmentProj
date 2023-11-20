@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\GetUserLoginInfo_Result.cs">
+      <DependentUpon>ServicesModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\ServicesModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ServicesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UserView.cs">
+      <DependentUpon>ServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\user_account.cs">
       <DependentUpon>ServicesModel.tt</DependentUpon>

@@ -1,13 +1,16 @@
 USE HairServicesDB;
 
+-- REGULAR TABLE
 CREATE TABLE user_category(
 	role_id int PRIMARY KEY,
 	[description] varchar(50),
-	-- [user_id] int,
-	--- FOREIGN KEY([user_id]) REFERENCES user_account([user_id])
 );
 
-SELECT * FROM user_information
+CREATE TABLE user_account (
+	[user_id] int PRIMARY KEY IDENTITY (1, 1001),
+	username varchar(50) NOT NULL,
+	[password] varchar(50) NOT NULL,
+);
 
 CREATE TABLE user_information(
 	user_info_id int PRIMARY KEY IDENTITY (1, 1001),
@@ -20,9 +23,18 @@ CREATE TABLE user_information(
 	FOREIGN KEY([role_id]) REFERENCES user_category([role_id])
 );
 
-CREATE TABLE user_account (
-	[user_id] int PRIMARY KEY IDENTITY (1, 1001)
-	username varchar(50) NOT NULL,
-	[password] varchar(50) NOT NULL,
-);
+
+--TRUNCATE TABLE user_account;
+--TRUNCATE TABLE user_category;
+--TRUNCATE TABLE user_information;
+
+-- VIEWS 
+CREATE VIEW UserView
+AS
+SELECT ua.[user_id], ua.username, ua.[password], ui.full_name, ui.phone_number, ui.email_address, ui.[role_id], uc.[description]
+FROM dbo.user_account ua
+JOIN user_information ui ON ua.[user_id] = ui.[user_id]
+JOIN user_category uc ON ui.[role_id] = uc.[role_id];
+
+SELECT * FROM UserView
 

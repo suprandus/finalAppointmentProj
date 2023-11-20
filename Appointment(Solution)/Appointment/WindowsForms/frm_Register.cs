@@ -22,15 +22,37 @@ namespace Appointment
             UserRepo = new UserRepo.UserRepo();
         }
 
+        //-----------------------------------------------
         // functions
         private void OpenLoginForm()
         {
             using (var loginForm = new frm_Login())
             {
-                loginForm.Show();
-                Close();
+                this.Hide();
+                _ = loginForm.ShowDialog();
+                this.Show();
             }
         }
+        private void loadCmbRole()
+        {
+            // load user_category table
+            try
+            {
+                using (var db = new ServicesEntities()) // DBContext
+                {
+                    var roles = db.user_category.ToList();
+
+                    cmbRole.DataSource = roles;
+                    cmbRole.DisplayMember = "description"; // actual property
+                    cmbRole.ValueMember = "role_id"; // actual property
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading roles: {ex.Message}");
+            }
+        }
+        //------------------------------------------------
         private void btnBack_Click(object sender, EventArgs e)
         {
             OpenLoginForm();
@@ -90,7 +112,6 @@ namespace Appointment
                 return;
             }
 
-            // pop up to for confirmation
             // calling register function and pass the parameter
             ErrorCode result = UserRepo.Register((int)cmbRole.SelectedValue, txtUserName.Text,
                 txtUserPassword.Text, txtFullName.Text, txtPhoneNumber.Text, txtEmailAddress.Text);
@@ -104,33 +125,20 @@ namespace Appointment
                 txtEmailAddress.Clear();
                 txtPhoneNumber.Clear();
                 MessageBox.Show("Account Created Successfully!");
+
+                // Back to login
+                OpenLoginForm();
             }
             else
             {
-                MessageBox.Show("Failed!");
+                MessageBox.Show("Retry.");
             }
         }
 
         private void frm_Register_Load(object sender, EventArgs e)
         {
-            try
-            {
-                using (var db = new ServicesEntities()) // DBContext
-                {
-                    var roles = db.user_category.ToList();
-
-                    cmbRole.DataSource = roles;
-                    cmbRole.DisplayMember = "description"; // actual property
-                    cmbRole.ValueMember = "role_id"; // actual property
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading roles: {ex.Message}");
-            }
+            loadCmbRole();
         }
-
-
     }
 }
 

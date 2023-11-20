@@ -26,7 +26,28 @@
     <Property Name="user_id" Type="int" Nullable="false" />
     <Property Name="role_id" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__user_info__role___07C12930">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'HairServicesDB.dbo.UserView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserView">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="full_name" />
+      <PropertyRef Name="phone_number" />
+      <PropertyRef Name="email_address" />
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="full_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__user_info__role___14270015">
     <End Role="user_category" Type="Self.user_category" Multiplicity="1" />
     <End Role="user_information" Type="Self.user_information" Multiplicity="*" />
     <ReferentialConstraint>
@@ -38,7 +59,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__user_info__user___06CD04F7">
+  <Association Name="FK__user_info__user___1332DBDC">
     <End Role="user_account" Type="Self.user_account" Multiplicity="1" />
     <End Role="user_information" Type="Self.user_information" Multiplicity="*" />
     <ReferentialConstraint>
@@ -54,11 +75,23 @@
     <EntitySet Name="user_account" EntityType="Self.user_account" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user_category" EntityType="Self.user_category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user_information" EntityType="Self.user_information" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__user_info__role___07C12930" Association="Self.FK__user_info__role___07C12930">
+    <EntitySet Name="UserView" EntityType="Self.UserView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[UserView].[user_id] AS [user_id], 
+[UserView].[username] AS [username], 
+[UserView].[password] AS [password], 
+[UserView].[full_name] AS [full_name], 
+[UserView].[phone_number] AS [phone_number], 
+[UserView].[email_address] AS [email_address], 
+[UserView].[role_id] AS [role_id], 
+[UserView].[description] AS [description]
+FROM [dbo].[UserView] AS [UserView]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__user_info__role___14270015" Association="Self.FK__user_info__role___14270015">
       <End Role="user_category" EntitySet="user_category" />
       <End Role="user_information" EntitySet="user_information" />
     </AssociationSet>
-    <AssociationSet Name="FK__user_info__user___06CD04F7" Association="Self.FK__user_info__user___06CD04F7">
+    <AssociationSet Name="FK__user_info__user___1332DBDC" Association="Self.FK__user_info__user___1332DBDC">
       <End Role="user_account" EntitySet="user_account" />
       <End Role="user_information" EntitySet="user_information" />
     </AssociationSet>

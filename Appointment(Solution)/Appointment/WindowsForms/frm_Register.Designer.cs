@@ -94,6 +94,7 @@ namespace Appointment
             this.txtEmailAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtEmailAddress.CustomButton.UseSelectable = true;
             this.txtEmailAddress.CustomButton.Visible = false;
+            this.txtEmailAddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtEmailAddress.Lines = new string[0];
             this.txtEmailAddress.Location = new System.Drawing.Point(24, 170);
             this.txtEmailAddress.MaxLength = 32767;
@@ -105,7 +106,7 @@ namespace Appointment
             this.txtEmailAddress.SelectionStart = 0;
             this.txtEmailAddress.ShortcutsEnabled = true;
             this.txtEmailAddress.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailAddress.TabIndex = 9;
+            this.txtEmailAddress.TabIndex = 2;
             this.txtEmailAddress.UseSelectable = true;
             this.txtEmailAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmailAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -133,6 +134,7 @@ namespace Appointment
             this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPhoneNumber.CustomButton.UseSelectable = true;
             this.txtPhoneNumber.CustomButton.Visible = false;
+            this.txtPhoneNumber.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPhoneNumber.Lines = new string[0];
             this.txtPhoneNumber.Location = new System.Drawing.Point(24, 114);
             this.txtPhoneNumber.MaxLength = 32767;
@@ -144,7 +146,7 @@ namespace Appointment
             this.txtPhoneNumber.SelectionStart = 0;
             this.txtPhoneNumber.ShortcutsEnabled = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(150, 29);
-            this.txtPhoneNumber.TabIndex = 7;
+            this.txtPhoneNumber.TabIndex = 1;
             this.txtPhoneNumber.UseSelectable = true;
             this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -172,6 +174,7 @@ namespace Appointment
             this.txtFullName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFullName.CustomButton.UseSelectable = true;
             this.txtFullName.CustomButton.Visible = false;
+            this.txtFullName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFullName.Lines = new string[0];
             this.txtFullName.Location = new System.Drawing.Point(24, 58);
             this.txtFullName.MaxLength = 32767;
@@ -183,7 +186,7 @@ namespace Appointment
             this.txtFullName.SelectionStart = 0;
             this.txtFullName.ShortcutsEnabled = true;
             this.txtFullName.Size = new System.Drawing.Size(150, 29);
-            this.txtFullName.TabIndex = 6;
+            this.txtFullName.TabIndex = 0;
             this.txtFullName.UseSelectable = true;
             this.txtFullName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFullName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -239,6 +242,7 @@ namespace Appointment
             this.txtConfirmPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtConfirmPassword.CustomButton.UseSelectable = true;
             this.txtConfirmPassword.CustomButton.Visible = false;
+            this.txtConfirmPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtConfirmPassword.Lines = new string[0];
             this.txtConfirmPassword.Location = new System.Drawing.Point(32, 230);
             this.txtConfirmPassword.MaxLength = 32767;
@@ -250,7 +254,7 @@ namespace Appointment
             this.txtConfirmPassword.SelectionStart = 0;
             this.txtConfirmPassword.ShortcutsEnabled = true;
             this.txtConfirmPassword.Size = new System.Drawing.Size(150, 29);
-            this.txtConfirmPassword.TabIndex = 9;
+            this.txtConfirmPassword.TabIndex = 3;
             this.txtConfirmPassword.UseSelectable = true;
             this.txtConfirmPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtConfirmPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -266,7 +270,7 @@ namespace Appointment
             this.cmbRole.Location = new System.Drawing.Point(32, 60);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(146, 29);
-            this.cmbRole.TabIndex = 41;
+            this.cmbRole.TabIndex = 0;
             this.cmbRole.UseSelectable = true;
             // 
             // metroLabel3
@@ -292,6 +296,7 @@ namespace Appointment
             this.txtUserPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtUserPassword.CustomButton.UseSelectable = true;
             this.txtUserPassword.CustomButton.Visible = false;
+            this.txtUserPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtUserPassword.Lines = new string[0];
             this.txtUserPassword.Location = new System.Drawing.Point(32, 172);
             this.txtUserPassword.MaxLength = 32767;
@@ -303,7 +308,7 @@ namespace Appointment
             this.txtUserPassword.SelectionStart = 0;
             this.txtUserPassword.ShortcutsEnabled = true;
             this.txtUserPassword.Size = new System.Drawing.Size(150, 29);
-            this.txtUserPassword.TabIndex = 7;
+            this.txtUserPassword.TabIndex = 2;
             this.txtUserPassword.UseSelectable = true;
             this.txtUserPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUserPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -331,6 +336,7 @@ namespace Appointment
             this.txtUserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtUserName.CustomButton.UseSelectable = true;
             this.txtUserName.CustomButton.Visible = false;
+            this.txtUserName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtUserName.Lines = new string[0];
             this.txtUserName.Location = new System.Drawing.Point(32, 114);
             this.txtUserName.MaxLength = 32767;
@@ -342,7 +348,7 @@ namespace Appointment
             this.txtUserName.SelectionStart = 0;
             this.txtUserName.ShortcutsEnabled = true;
             this.txtUserName.Size = new System.Drawing.Size(150, 29);
-            this.txtUserName.TabIndex = 6;
+            this.txtUserName.TabIndex = 1;
             this.txtUserName.UseSelectable = true;
             this.txtUserName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUserName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
