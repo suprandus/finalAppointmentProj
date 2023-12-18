@@ -16,6 +16,5 @@ namespace Appointment.WindowsForms
         {
             InitializeComponent();
         }
-
     }
 }

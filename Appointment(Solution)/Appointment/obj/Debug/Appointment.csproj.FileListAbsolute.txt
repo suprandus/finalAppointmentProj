@@ -15,3 +15,6 @@ C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\EntityFramework.dll
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\bin\Debug\EntityFramework.xml
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.csproj.AssemblyReference.cache
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_AdminDashboard.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_ClientDashboard.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_StaffDashboard.resources

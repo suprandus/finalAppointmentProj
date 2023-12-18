@@ -125,6 +125,12 @@
     <Compile Include="WindowsForms\frm_StaffDashboard.Designer.cs">
       <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowsForms\frm_AdminDashboard.resx">
+      <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_ClientDashboard.resx">
+      <DependentUpon>frm_ClientDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowsForms\frm_StaffDashboard.resx">
+      <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Database\ServicesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ServicesModel.Designer.cs</LastGenOutput>

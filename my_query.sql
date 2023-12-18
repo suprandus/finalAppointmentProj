@@ -24,10 +24,6 @@ CREATE TABLE user_information(
 );
 
 
---TRUNCATE TABLE user_account;
---TRUNCATE TABLE user_category;
---TRUNCATE TABLE user_information;
-
 -- VIEWS 
 CREATE VIEW UserView
 AS
@@ -37,4 +33,3 @@ JOIN user_information ui ON ua.[user_id] = ui.[user_id]
 JOIN user_category uc ON ui.[role_id] = uc.[role_id];
 
 SELECT * FROM UserView
-
