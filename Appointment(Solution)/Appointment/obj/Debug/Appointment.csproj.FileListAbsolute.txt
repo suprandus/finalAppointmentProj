@@ -18,3 +18,7 @@ C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_AdminDashboard.resources
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_ClientDashboard.resources
 C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_StaffDashboard.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.Services.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_TransactionHistory.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_UserAccounts.resources
+C:\Users\alberinandus\Documents\GitHub\finalAppointmentProj\Appointment(Solution)\Appointment\obj\Debug\Appointment.WindowsForms.frm_ModifyRecords.resources

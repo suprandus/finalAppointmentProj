@@ -29,46 +29,61 @@ namespace Appointment.WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new MetroFramework.Controls.MetroButton();
-            this.btnLogin = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnViewTransactionHistory = new MetroFramework.Controls.MetroButton();
+            this.btnManageUserAccounts = new MetroFramework.Controls.MetroButton();
+            this.manage_Services = new MetroFramework.Controls.MetroButton();
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // btnRegister
+            // btnViewTransactionHistory
             // 
-            this.btnRegister.Location = new System.Drawing.Point(100, 209);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(149, 36);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "View Transaction History";
-            this.btnRegister.UseSelectable = true;
+            this.btnViewTransactionHistory.Location = new System.Drawing.Point(100, 201);
+            this.btnViewTransactionHistory.Name = "btnViewTransactionHistory";
+            this.btnViewTransactionHistory.Size = new System.Drawing.Size(149, 36);
+            this.btnViewTransactionHistory.TabIndex = 2;
+            this.btnViewTransactionHistory.Text = "View Transaction History";
+            this.btnViewTransactionHistory.UseSelectable = true;
+            this.btnViewTransactionHistory.Click += new System.EventHandler(this.btnViewTransactionHistory_Click);
             // 
-            // btnLogin
+            // btnManageUserAccounts
             // 
-            this.btnLogin.Location = new System.Drawing.Point(100, 156);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(149, 36);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Manage User Accounts";
-            this.btnLogin.UseSelectable = true;
+            this.btnManageUserAccounts.Location = new System.Drawing.Point(100, 152);
+            this.btnManageUserAccounts.Name = "btnManageUserAccounts";
+            this.btnManageUserAccounts.Size = new System.Drawing.Size(149, 36);
+            this.btnManageUserAccounts.TabIndex = 1;
+            this.btnManageUserAccounts.Text = "Manage User Accounts";
+            this.btnManageUserAccounts.UseSelectable = true;
+            this.btnManageUserAccounts.Click += new System.EventHandler(this.btnManageUserAccounts_Click);
             // 
-            // metroButton1
+            // manage_Services
             // 
-            this.metroButton1.Location = new System.Drawing.Point(100, 103);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(149, 36);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Manage Services";
-            this.metroButton1.UseSelectable = true;
+            this.manage_Services.Location = new System.Drawing.Point(100, 103);
+            this.manage_Services.Name = "manage_Services";
+            this.manage_Services.Size = new System.Drawing.Size(149, 36);
+            this.manage_Services.TabIndex = 0;
+            this.manage_Services.Text = "Manage Services";
+            this.manage_Services.UseSelectable = true;
+            this.manage_Services.Click += new System.EventHandler(this.manage_Services_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(100, 250);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(149, 36);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseSelectable = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // frm_AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 325);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.manage_Services);
+            this.Controls.Add(this.btnViewTransactionHistory);
+            this.Controls.Add(this.btnManageUserAccounts);
             this.Name = "frm_AdminDashboard";
             this.Text = "Administrator";
             this.ResumeLayout(false);
@@ -77,8 +92,9 @@ namespace Appointment.WindowsForms
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btnRegister;
-        private MetroFramework.Controls.MetroButton btnLogin;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnViewTransactionHistory;
+        private MetroFramework.Controls.MetroButton btnManageUserAccounts;
+        private MetroFramework.Controls.MetroButton manage_Services;
+        private MetroFramework.Controls.MetroButton btnLogout;
     }
 }

@@ -111,6 +111,12 @@
     <Compile Include="WindowsForms\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsForms\frm_ModifyRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_ModifyRecords.Designer.cs">
+      <DependentUpon>frm_ModifyRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsForms\frm_Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,24 @@
     <Compile Include="WindowsForms\frm_StaffDashboard.Designer.cs">
       <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsForms\frm_TransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_TransactionHistory.Designer.cs">
+      <DependentUpon>frm_TransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\frm_UserAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_UserAccounts.Designer.cs">
+      <DependentUpon>frm_UserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="WindowsForms\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_ModifyRecords.resx">
+      <DependentUpon>frm_ModifyRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_Register.resx">
       <DependentUpon>frm_Register.cs</DependentUpon>
@@ -148,6 +175,15 @@
     </Compile>
     <EmbeddedResource Include="WindowsForms\frm_StaffDashboard.resx">
       <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_TransactionHistory.resx">
+      <DependentUpon>frm_TransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_UserAccounts.resx">
+      <DependentUpon>frm_UserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\ServicesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
