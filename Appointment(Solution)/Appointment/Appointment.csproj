@@ -93,12 +93,24 @@
       <DependentUpon>ServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRepo\UserRepo.cs" />
+    <Compile Include="WindowsForms\Client Transaction History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\Client Transaction History.Designer.cs">
+      <DependentUpon>Client Transaction History.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsForms\CurrentUser.cs" />
     <Compile Include="WindowsForms\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WindowsForms\frm_AdminDashboard.Designer.cs">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\frm_AssignedServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_AssignedServices.Designer.cs">
+      <DependentUpon>frm_AssignedServices.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsForms\frm_AssigningServices.cs">
       <SubType>Form</SubType>
@@ -117,6 +129,12 @@
     </Compile>
     <Compile Include="WindowsForms\frm_ClientStatus.Designer.cs">
       <DependentUpon>frm_ClientStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\frm_GeneralAdminTransactionsHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_GeneralAdminTransactionsHistory.Designer.cs">
+      <DependentUpon>frm_GeneralAdminTransactionsHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsForms\frm_Login.cs">
       <SubType>Form</SubType>
@@ -144,6 +162,12 @@
     <Compile Include="WindowsForms\frm_StaffDashboard.Designer.cs">
       <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsForms\frm_StaffTransactionHist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_StaffTransactionHist.Designer.cs">
+      <DependentUpon>frm_StaffTransactionHist.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsForms\frm_TransactionHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,8 +192,14 @@
     <Compile Include="WindowsForms\Services.Designer.cs">
       <DependentUpon>Services.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowsForms\Client Transaction History.resx">
+      <DependentUpon>Client Transaction History.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_AssignedServices.resx">
+      <DependentUpon>frm_AssignedServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_AssigningServices.resx">
       <DependentUpon>frm_AssigningServices.cs</DependentUpon>
@@ -179,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_ClientStatus.resx">
       <DependentUpon>frm_ClientStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_GeneralAdminTransactionsHistory.resx">
+      <DependentUpon>frm_GeneralAdminTransactionsHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -200,6 +233,9 @@
     </Compile>
     <EmbeddedResource Include="WindowsForms\frm_StaffDashboard.resx">
       <DependentUpon>frm_StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_StaffTransactionHist.resx">
+      <DependentUpon>frm_StaffTransactionHist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_TransactionHistory.resx">
       <DependentUpon>frm_TransactionHistory.cs</DependentUpon>

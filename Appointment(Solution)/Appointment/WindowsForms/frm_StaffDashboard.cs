@@ -35,6 +35,25 @@ namespace Appointment.WindowsForms
                 this.Show();
             }
         }
+
+        private void OpenTransHist()
+        {
+            using (var transactionHist = new frm_StaffTransactionHist())
+            {
+                this.Hide();
+                _ = transactionHist.ShowDialog();
+                this.Show();
+            }
+        }
+        private void OpenAssignendServices()
+        {
+            using (var assignedServices = new frm_AssignedServices())
+            {
+                this.Hide();
+                _ = assignedServices.ShowDialog();
+                this.Show();
+            }
+        }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             OpenLoginForm();
@@ -43,12 +62,17 @@ namespace Appointment.WindowsForms
 
         private void btnView_Click(object sender, EventArgs e)
         {
-
+            OpenAssignendServices();
         }
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
             OpenAssigningServices();
+        }
+
+        private void btnTransactionHist_Click(object sender, EventArgs e)
+        {
+            OpenTransHist();
         }
     }
 }

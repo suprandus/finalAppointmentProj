@@ -78,6 +78,46 @@ JOIN user_category uc ON ui.[role_id] = uc.[role_id];
 
 SELECT * FROM UserView
 
+-- VIew 
+CREATE VIEW s_transations_history_view AS
+SELECT
+    staff_id,
+    [date],
+    SUM(price) AS totalAmount
+FROM
+    requested_services
+WHERE
+    status = 'Completed'
+GROUP BY
+    staff_id, [date];
+
+SELECT * FROM s_transations_history_view
+
+CREATE VIEW assigned_staff_view AS
+SELECT
+    rs.[service_name] AS 'Service Name',
+    MAX(rs.price) AS 'Price',
+    rs.[date] AS 'Date',
+    MAX(rs.user_id) AS 'Client ID',
+    MAX(rs.staff_name) AS 'Staff Name',
+    MAX(rs.status) AS 'Status'
+FROM
+    [requested_services] rs
+GROUP BY
+    rs.[service_name], rs.[date];
+
+
+---
+CREATE VIEW service_view AS
+SELECT
+    user_id AS 'My ID',
+    service_name AS 'Service Name',
+    [date] AS 'Scheduled Date',
+    staff_name 'Assigned Staff',
+    status AS 'Current Status'
+FROM
+    requested_services;
+
 -- STORED PROCEDURE
 CREATE PROCEDURE GetUsers
 AS
@@ -132,5 +172,42 @@ END;
 
 DROP PROCEDURE AddServiceRequest
 
+-- Create a Stored Procedure to Update Status Based on Date
+CREATE PROCEDURE UpdateServiceStatus
+    @user_id int,
+    @service_name varchar(50),
+    @date datetime,
+    @new_status varchar(50)
+AS
+BEGIN
+    UPDATE requested_services
+    SET status = @new_status
+    WHERE user_id = @user_id
+      AND service_name = @service_name
+      AND [date] = @date;
+END;
+
+--
+CREATE PROCEDURE UpdateServiceStatus1
+    @user_id int,
+    @service_name varchar(50),
+    @price decimal(10, 2),
+    @date datetime,
+    @staff_id int,
+    @staff_name varchar(50),
+    @new_status varchar(50)
+AS
+BEGIN
+    UPDATE requested_services
+    SET staff_id = @staff_id,
+        staff_name = @staff_name,
+        status = @new_status
+    WHERE user_id = @user_id
+      AND service_name = @service_name
+      AND price = @price
+      AND [date] = @date;
+END;
+
+drop procedure UpdateServiceStatus1
 
 --

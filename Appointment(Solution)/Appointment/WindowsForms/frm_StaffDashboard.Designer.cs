@@ -29,20 +29,21 @@ namespace Appointment.WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new MetroFramework.Controls.MetroButton();
+            this.btnTransactionHist = new MetroFramework.Controls.MetroButton();
             this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.btnAssign = new MetroFramework.Controls.MetroButton();
             this.btnView = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // btnRegister
+            // btnTransactionHist
             // 
-            this.btnRegister.Location = new System.Drawing.Point(114, 167);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(149, 36);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "View Transaction History";
-            this.btnRegister.UseSelectable = true;
+            this.btnTransactionHist.Location = new System.Drawing.Point(114, 167);
+            this.btnTransactionHist.Name = "btnTransactionHist";
+            this.btnTransactionHist.Size = new System.Drawing.Size(149, 36);
+            this.btnTransactionHist.TabIndex = 2;
+            this.btnTransactionHist.Text = "View Transaction History";
+            this.btnTransactionHist.UseSelectable = true;
+            this.btnTransactionHist.Click += new System.EventHandler(this.btnTransactionHist_Click);
             // 
             // btnLogout
             // 
@@ -82,7 +83,7 @@ namespace Appointment.WindowsForms
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnAssign);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnTransactionHist);
             this.Name = "frm_StaffDashboard";
             this.Text = "Staff";
             this.ResumeLayout(false);
@@ -90,7 +91,7 @@ namespace Appointment.WindowsForms
         }
 
         #endregion
-        private MetroFramework.Controls.MetroButton btnRegister;
+        private MetroFramework.Controls.MetroButton btnTransactionHist;
         private MetroFramework.Controls.MetroButton btnLogout;
         private MetroFramework.Controls.MetroButton btnAssign;
         private MetroFramework.Controls.MetroButton btnView;

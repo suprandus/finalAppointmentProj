@@ -142,7 +142,7 @@ namespace Appointment.WindowsForms
                     foreach (DataGridViewRow row in dgv_Services.SelectedRows)
                     {
                         int staff_id_hahays = Convert.ToInt32(txtCurrentUserId.Text.ToString());
-                        string completeStatus = "Complete";
+                        string completeStatus = "Completed";
                         string staff_name = full_name.ToString();
                         int client_user_id = Convert.ToInt32(row.Cells["User ID"].Value);
                         string serviceName = row.Cells["Service Name"].Value.ToString();
@@ -239,6 +239,5 @@ namespace Appointment.WindowsForms
             // Reload
             loadData();
         }
-
     }
 }

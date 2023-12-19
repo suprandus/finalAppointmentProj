@@ -45,7 +45,15 @@ namespace Appointment.WindowsForms
                 this.Show();
             }
         }
-
+        private void OpenClientHistory()
+        {
+            using (var client_Transaction_History = new Client_Transaction_History())
+            {
+                this.Hide();
+                _ = client_Transaction_History.ShowDialog();
+                this.Show();
+            }
+        }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             OpenLogin();
@@ -59,6 +67,11 @@ namespace Appointment.WindowsForms
         private void btnViewStatus_Click(object sender, EventArgs e)
         {
             OpenClientStatus();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            OpenClientHistory();
         }
     }
 }
