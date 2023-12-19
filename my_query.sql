@@ -118,6 +118,23 @@ SELECT
 FROM
     requested_services;
 
+-----
+CREATE VIEW userview_general AS
+SELECT
+    MAX(service_name) AS 'Service Name',
+    MAX(price) AS 'Price',
+    [date] AS 'Date',
+    MAX(user_id) AS 'Client ID',
+    MAX(staff_id) AS 'Staff ID',
+    MAX(staff_name) AS 'Staff Name',
+    MAX(status) AS 'Status'
+FROM
+    requested_services
+GROUP BY
+	date;
+
+
+
 -- STORED PROCEDURE
 CREATE PROCEDURE GetUsers
 AS

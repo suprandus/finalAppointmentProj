@@ -38,7 +38,7 @@ namespace Appointment.WindowsForms
         }
         private void OpenTransactions()
         {
-            using (var transactionHistory = new frm_TransactionHistory())
+            using (var transactionHistory = new frm_GeneralAdminTransactionsHistory())
             {
                 this.Hide();
                 _ = transactionHistory.ShowDialog();
