@@ -93,17 +93,30 @@
       <DependentUpon>ServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRepo\UserRepo.cs" />
+    <Compile Include="WindowsForms\CurrentUser.cs" />
     <Compile Include="WindowsForms\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WindowsForms\frm_AdminDashboard.Designer.cs">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsForms\frm_AssigningServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_AssigningServices.Designer.cs">
+      <DependentUpon>frm_AssigningServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsForms\frm_ClientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WindowsForms\frm_ClientDashboard.Designer.cs">
       <DependentUpon>frm_ClientDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\frm_ClientStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\frm_ClientStatus.Designer.cs">
+      <DependentUpon>frm_ClientStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsForms\frm_Login.cs">
       <SubType>Form</SubType>
@@ -143,6 +156,12 @@
     <Compile Include="WindowsForms\frm_UserAccounts.Designer.cs">
       <DependentUpon>frm_UserAccounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowsForms\RequestServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\RequestServices.Designer.cs">
+      <DependentUpon>RequestServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsForms\Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,8 +171,14 @@
     <EmbeddedResource Include="WindowsForms\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_AssigningServices.resx">
+      <DependentUpon>frm_AssigningServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_ClientDashboard.resx">
       <DependentUpon>frm_ClientDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\frm_ClientStatus.resx">
+      <DependentUpon>frm_ClientStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -181,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\frm_UserAccounts.resx">
       <DependentUpon>frm_UserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\RequestServices.resx">
+      <DependentUpon>RequestServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsForms\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>

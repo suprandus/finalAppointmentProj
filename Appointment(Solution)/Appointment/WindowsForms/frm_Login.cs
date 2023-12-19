@@ -75,6 +75,10 @@ namespace Appointment
 
                     if (reader.Read())
                     {
+                        // Store to current user
+                        WindowsForms.CurrentUser.UserId = Convert.ToInt32(reader["user_id"]);
+                        WindowsForms.CurrentUser.user_name = reader["full_name"].ToString();
+
                         string roleDescription = reader["description"].ToString();
                         switch (roleDescription.ToLower())
                         {

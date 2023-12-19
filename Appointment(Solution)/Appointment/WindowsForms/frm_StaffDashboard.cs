@@ -16,5 +16,39 @@ namespace Appointment.WindowsForms
         {
             InitializeComponent();
         }
+        // functions
+        private void OpenLoginForm()
+        {
+            using (var login = new frm_Login())
+            {
+                this.Hide();
+                _ = login.ShowDialog();
+                this.Show();
+            }
+        }
+        private void OpenAssigningServices()
+        {
+            using (var assigningServices = new frm_AssigningServices())
+            {
+                this.Hide();
+                _ = assigningServices.ShowDialog();
+                this.Show();
+            }
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            OpenLoginForm();
+        }
+
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            OpenAssigningServices();
+        }
     }
 }

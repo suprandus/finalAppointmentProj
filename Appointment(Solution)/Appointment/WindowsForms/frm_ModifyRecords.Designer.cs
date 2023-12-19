@@ -38,6 +38,7 @@ namespace Appointment.WindowsForms
             // 
             // dgv_UserAccountss
             // 
+            this.dgv_UserAccountss.AllowUserToAddRows = false;
             this.dgv_UserAccountss.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_UserAccountss.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_UserAccountss.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

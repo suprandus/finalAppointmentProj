@@ -29,46 +29,60 @@ namespace Appointment.WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnRequestServices = new MetroFramework.Controls.MetroButton();
             this.btnRegister = new MetroFramework.Controls.MetroButton();
-            this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.btnViewStatus = new MetroFramework.Controls.MetroButton();
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btnRequestServices
             // 
-            this.metroButton1.Location = new System.Drawing.Point(122, 107);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(149, 36);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Request Services";
-            this.metroButton1.UseSelectable = true;
+            this.btnRequestServices.Location = new System.Drawing.Point(107, 82);
+            this.btnRequestServices.Name = "btnRequestServices";
+            this.btnRequestServices.Size = new System.Drawing.Size(149, 36);
+            this.btnRequestServices.TabIndex = 0;
+            this.btnRequestServices.Text = "Request Services";
+            this.btnRequestServices.UseSelectable = true;
+            this.btnRequestServices.Click += new System.EventHandler(this.btnRequestServices_Click);
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(122, 213);
+            this.btnRegister.Location = new System.Drawing.Point(107, 180);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(149, 36);
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "View Transaction History";
             this.btnRegister.UseSelectable = true;
             // 
-            // btnLogin
+            // btnViewStatus
             // 
-            this.btnLogin.Location = new System.Drawing.Point(122, 160);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(149, 36);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "View Service Status";
-            this.btnLogin.UseSelectable = true;
+            this.btnViewStatus.Location = new System.Drawing.Point(107, 131);
+            this.btnViewStatus.Name = "btnViewStatus";
+            this.btnViewStatus.Size = new System.Drawing.Size(149, 36);
+            this.btnViewStatus.TabIndex = 1;
+            this.btnViewStatus.Text = "View Service Status";
+            this.btnViewStatus.UseSelectable = true;
+            this.btnViewStatus.Click += new System.EventHandler(this.btnViewStatus_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(107, 229);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(149, 36);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseSelectable = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // frm_ClientDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 325);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnRequestServices);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnViewStatus);
             this.Name = "frm_ClientDashboard";
             this.Text = "Client";
             this.ResumeLayout(false);
@@ -77,8 +91,9 @@ namespace Appointment.WindowsForms
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnRequestServices;
         private MetroFramework.Controls.MetroButton btnRegister;
-        private MetroFramework.Controls.MetroButton btnLogin;
+        private MetroFramework.Controls.MetroButton btnViewStatus;
+        private MetroFramework.Controls.MetroButton btnLogout;
     }
 }

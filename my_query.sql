@@ -28,6 +28,45 @@ CREATE TABLE services (
     price decimal(10, 2) NOT NULL
 );
 
+-- Create Requested Services Table
+--CREATE TABLE requested_services (
+--    service_name varchar(50),
+--    price decimal(10, 2),
+--    [date] datetime,
+--    user_id int,
+--    status varchar(50) DEFAULT 'In Progress',
+--    PRIMARY KEY (service_name, price, [date], user_id),
+--    FOREIGN KEY (user_id) REFERENCES user_account([user_id])
+--);
+
+drop table requested_services
+-- Updated table structure
+CREATE TABLE requested_services (
+    service_name varchar(50),
+    price decimal(10, 2),
+    [date] datetime,
+    user_id int,
+    staff_id int, 
+	staff_name varchar(50) DEFAULT 'Not Assigned',
+    status varchar(50) DEFAULT 'In Progress',
+    PRIMARY KEY (service_name, price, [date], user_id),
+    FOREIGN KEY (user_id) REFERENCES user_account([user_id]),
+    FOREIGN KEY (staff_id) REFERENCES user_account([user_id]) 
+);
+
+-- Updated query
+SELECT 
+    rs.service_name AS 'Service Name', 
+    rs.price AS 'Price', 
+    rs.date AS 'Date', 
+    rs.status AS 'Status',
+    ua.user_id AS 'User ID',
+    ua.username AS 'Staff Name'
+FROM requested_services rs
+JOIN user_account ua ON rs.staff_id = ua.user_id
+WHERE rs.user_id = @user_id
+ORDER BY rs.date ASC;
+
 
 -- VIEWS 
 CREATE VIEW UserView
@@ -78,5 +117,20 @@ BEGIN
 END;
 
 EXEC GetUsers1;
+
+-- Create a Stored Procedure for Adding Services
+CREATE PROCEDURE AddServiceRequest
+    @user_id int,
+    @service_name varchar(50),
+    @price decimal(10, 2),
+    @date datetime
+AS
+BEGIN
+    INSERT INTO requested_services(user_id, service_name, price, [date])
+    VALUES (@user_id, @service_name, @price, @date);
+END;
+
+DROP PROCEDURE AddServiceRequest
+
 
 --

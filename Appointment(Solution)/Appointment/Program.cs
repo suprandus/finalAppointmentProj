@@ -17,7 +17,7 @@ namespace Appointment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frm_Login());
-            Application.Run(new WindowsForms.frm_UserAccounts());
+            Application.Run(new WindowsForms.frm_StaffDashboard());
         }
     }
 }

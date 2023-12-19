@@ -171,12 +171,9 @@ namespace Appointment.WindowsForms
                     }
                     finally
                     {
-                        // Close the connection if it is open
-                        if (connection.State == ConnectionState.Open)
-                        {
-                            connection.Close();
-                        }
+                        connection.Close();
                     }
+                    loadData();
                 }
             }
             else
